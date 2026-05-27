@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Cursos - Portal Nzinga</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="menu">
+            <div class="menu_logo">Nzinga Mbandi</div>
+            <ul class="menu_links">
+                <li><a class="menu_item" href="index.html">Início</a></li>
+                <li><a class="menu_item" href="index.html#valores_missao">Sobre</a></li>
+                <li><a class="menu_item" href="cursos.html">Cursos</a></li>
+                <li><a class="menu_item" href="index.html#contacto_section">Contacto</a></li>
+            </ul>
+            <div class="menu_acao">
+                <button class="btn_portal">Portal do Estudante</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destaque">
+            <div class="container_destaque">
+                <div class="conteudo_destaque">
+                    <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; color: var(--primary); text-decoration: none; font-weight: 600; margin-bottom: 20px; font-size: 0.95rem;">
+                        <span class="material-symbols-outlined" style="font-size: 20px;">arrow_back</span> 
+                        Voltar ao Início
+                    </a>
+                    <br>
+                    <span class="etiqueta">Nossa Oferta Académica</span>
+                    <h1 class="titulo_destaque">Níveis de Ensino e Cursos</h1>
+                    <p class="descricao_destaque">
+                        Oferecemos uma jornada educativa completa, desde a base inicial até à preparação sólida para o ensino superior e mercado de trabalho.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lideranca" style="padding-top: 0; padding-bottom: 40px;">
+            <h2 class="titulo">Ensino Fundamental</h2>
+            <p class="subtitulo">A base do conhecimento e o desenvolvimento das primeiras competências.</p>
+            
+            <div class="cards_lideranca">
+                <div class="card">
+                    <span class="material-symbols-outlined icon" style="font-size: 48px; color: var(--primary); margin-bottom: 15px;">child_care</span>
+                    <h3>Ensino Primário</h3>
+                    <span class="cargo">Da Iniciação à 6ª Classe</span>
+                    <p>Foco no desenvolvimento motor, alfabetização completa, raciocínio lógico elementar e socialização, construindo pilares fortes para o futuro académico.</p>
+                </div>
+
+                <div class="card">
+                    <span class="material-symbols-outlined icon" style="font-size: 48px; color: var(--primary); margin-bottom: 15px;">auto_stories</span>
+                    <h3>I Ciclo do Ensino Secundário</h3>
+                    <span class="cargo">7ª, 8ª e 9ª Classe</span>
+                    <p>Transição para o conteúdo disciplinar aprofundado, estimulando o pensamento crítico, introdução às ciências e preparação rigorosa para o Ensino Médio.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr style="border: 0; height: 1px; background: #eee; max-width: 1200px; margin: 0 auto;" />
+
+        <section class="lideranca" style="padding-top: 60px;">
+            <h2 class="titulo">II Ciclo - Ensino Médio</h2>
+            <p class="subtitulo">Especializações pré-universitárias desenhadas para moldar os futuros líderes de Angola.</p>
+            
+            <div class="cards_lideranca">
+                <div class="card">
+                    <span class="material-symbols-outlined icon" style="font-size: 48px; color: var(--primary); margin-bottom: 15px;">gavel</span>
+                    <h3>Ciências Humanas</h3>
+                    <span class="cargo">Área de Especialização</span>
+                    <p>Focado no estudo da história, literatura, filosofia e línguas. Ideal para estudantes que pretendem seguir carreiras em diplomacia, comunicação, ensino e artes.</p>
+                </div>
+
+                <div class="card">
+                    <span class="material-symbols-outlined icon" style="font-size: 48px; color: var(--primary); margin-bottom: 15px;">biotech</span>
+                    <h3>Ciências Físicas e Biológicas</h3>
+                    <span class="cargo">Área de Especialização</span>
+                    <p>Exploração profunda do mundo natural, química, física e biologia. Prepara o caminho para as áreas da saúde (Medicina, Enfermagem) e Engenharias.</p>
+                </div>
+
+                <div class="card">
+                    <span class="material-symbols-outlined icon" style="font-size: 48px; color: var(--primary); margin-bottom: 15px;">payments</span>
+                    <h3>Ciências Económicas e Jurídicas</h3>
+                    <span class="cargo">Área de Especialização</span>
+                    <p>Introdução ao universo das finanças, contabilidade, gestão e introdução ao Direito. Direcionado a futuros gestores, economistas e profissionais do sistema jurídico.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer_principal">
+        <div class="footer_bottom" style="margin-top: 0; padding-top: 0; border-top: none; text-align: center;">
+            <p>&copy; 2026 Nzinga Mbandi. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnPortal = document.querySelector('.btn_portal');
+            const menuLinks = document.querySelector('.menu_links');
+            const menuItems = document.querySelectorAll('.menu_item');
+
+            if (btnPortal && menuLinks) {
+                btnPortal.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        if (!menuLinks.classList.contains('active')) {
+                            e.preventDefault(); 
+                            menuLinks.classList.add('active');
+                        } else {
+                            menuLinks.classList.remove('active');
+                        }
+                    }
+                });
+            }
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    if (menuLinks) menuLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
